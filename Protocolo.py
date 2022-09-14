@@ -2,7 +2,7 @@ prot = []
 def protocolo():
     op=0
     print("---------------Menu---------------------")
-    print("1.-Agregar instrucción")
+    print("1.-Agregar instruccion")
     print("2.-Agregar subpaso")
     print("3.-Borrar paso")
     print("4.-Borrar subpaso")
@@ -20,6 +20,7 @@ def protocolo():
     if op==2:
         ins=input("Introducir el subpaso ")
         prot[-1].append(ins)
+        print(prot)
         protocolo()
     if op==3:
         pos=int(input("Introduce el paso que quieres borrar "))
@@ -37,11 +38,11 @@ def protocolo():
         protocolo()
     if op==6:
         print("---------------------------------------------")
-        for i in range(1,len(prot)+1):
-            print(str(i)+".-"+prot[i-1][0])
-            for j in range(1,len(prot[i-1])):
-                print(str(i)+"."+str(j)+".-"+prot[i-1][j-1])
-                print("---------------------------------------------")   
+        for i in range(0,len(prot)):
+            print(str(i+1)+".-"+prot[i][0])
+            for j in range(1,len(prot[i])):
+                print("    "+str(i+1)+"."+str(j)+".-"+prot[i][j])
+            print("---------------------------------------------")   
         print("---------------------------------------------")
         protocolo()
         
