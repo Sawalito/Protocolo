@@ -20,7 +20,6 @@ def protocolo():
     if op==2:
         ins=input("Introducir el subpaso ")
         prot[-1].append(ins)
-        print(prot)
         protocolo()
     if op==3:
         pos=int(input("Introduce el paso que quieres borrar "))
