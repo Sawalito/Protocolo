@@ -36,11 +36,13 @@ def protocolo():
         prot[pos-1][0] = ins
         protocolo()
     if op==6:
-        print("")
+        print("---------------------------------------------")
         for i in range(1,len(prot)+1):
             print(str(i)+".-"+prot[i-1][0])
             for j in range(1,len(prot[i-1])):
                 print(str(i)+"."+str(j)+".-"+prot[i-1][j-1])
+                print("---------------------------------------------")   
+        print("---------------------------------------------")
         protocolo()
         
 
